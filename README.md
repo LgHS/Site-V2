@@ -11,3 +11,9 @@ The website uses the Flask Microframework to run.
 1. `pip install -r requirements.txt`
 1. `python3 run.py`
 1. That's it!
+
+**Note:** Launching the app from the IDLE has been proven hazardous 
+and may leave some hidden processes running in background.
+
+Such process might still be the active one despite not preventing new ones from starting,
+thus leading to situations are to debug.
