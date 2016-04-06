@@ -14,5 +14,5 @@
 	margin-left: .3em;
 }
 #layout {
-    background:url(../static/svg/tooth.svg) repeat-x top left;
+    border-top: 4px dashed black;
 }
