@@ -1,13 +1,6 @@
-<!doctype html>
-<html>
-{% block head %}
-<title>{% block title %}Pouf Pouf{% endblock %} | Liège Hackerspace</title> {# Pouf Pouf: https://youtu.be/zElex_b0trE?t=1h12m50s Desproges #}
-<meta charset="utf-8" />
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
-<link rel="shortcut icon" href="{{ url_for('static', filename='favicon-194x194.png') }}?v=5" sizes="194x194" />
-<link rel="shortcut icon" href="{{ url_for('static', filename='favicon-16x16.png') }}?v=3" sizes="16x16" />
-{% endblock %}
-<body>
+{% extends "body_less_layout.html" %}
+{% block body %}
+<body id="layout">
 	<div class="container">
 		<header id="page-header">
 			<div class="row">
@@ -56,7 +49,7 @@
 		<div id="content-wrapper">
 			<div class="row">
 				<main class="col-sm-8" id="page-main">
-					{% block body %}{% endblock %}
+					{% block content %}{% endblock %}
 				</main>
 				<aside class="col-sm-4">
 					<article>
@@ -141,4 +134,4 @@
 		</div>
 	</div>
 </body>
-</html>
+{% endblock %}
