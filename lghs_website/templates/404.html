@@ -17,13 +17,6 @@
 		font-weight: bold
 	}
 
-	.sadface {
-		/* Dup in style.css */
-		-webkit-transform: rotate(90deg);
-		display: inline-block;
-		margin-left: .3em
-	}
-
 	a {
 		text-decoration: none
 	}
@@ -39,7 +32,7 @@
 	<h1>Erreur 404</h1>
 	<p><img alt="[image of a broken key]" src="{{ url_for('static', filename='images/broken-key.jpg') }}" width="260" height="180" />
 	<p class="oops">OUPS !
-	<p>Malgré toutes nos recherches, la page demandée n'a pu être trouvée !!! <span class="sadface">:(</span>
+	<p>Malgré toutes nos recherches, la page demandée n'a pu être trouvée !!! <span class="smiley-face">:(</span>
 	<br>
 	<br>
 	<a href="{{ url_for('general.index') }}">» Retourner à la page d'acceuil</a>

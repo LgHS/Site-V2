@@ -9,8 +9,7 @@
 	max-width: 100%
 }
 .smiley-face {
-	/* Dup in 404.html */
-	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
 	display: inline-block;
 	margin-left: .3em;
 }
