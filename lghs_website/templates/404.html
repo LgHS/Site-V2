@@ -1,49 +1,41 @@
-<!doctype html>
-<html>
-<title>Chapter 404: The Lost Page</title>
-<link rel="shortcut icon" href="/static/favicon-194x194.png?v=5" sizes="194x194" />
-<link rel="shortcut icon" href="/static/favicon-16x16.png?v=3" sizes="16x16" />
-<style type="text/css">
-body {
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	text-align: center
-}
+{% extends "body_less_layout.html" %}
+{% block head %}
+	{{ super() }}
+	<style type="text/css">
+	body {
+		font-family: "Open Sans", Helvetica, Arial, sans-serif;
+		text-align: center
+	}
 
-h1 {
-	font-size: 4em
-}
+	h1 {
+		font-size: 4em
+	}
 
-.oops {
-	font-size: 2.5em;
-	font-weight: bold
-}
+	.oops {
+		font-size: 2.5em;
+		font-weight: bold
+	}
 
-.sadface {
-	/* Dup in style.css */
-	-webkit-transform: rotate(90deg);
-	display: inline-block;
-	margin-left: .3em
-}
+	a {
+		text-decoration: none
+	}
 
-a {
-	text-decoration: none
-}
+	a:hover {
+		text-decoration: underline
+	}
 
-a:hover {
-	text-decoration: underline
-}
-
-a:visited {
-	color: blue
-}
-</style>
-<body>
+	a:visited {
+		color: blue
+	}
+	</style>
+{% endblock %}
+{% block title %}Chapter 404: The Lost Page{% endblock %}
+{% block body %}
 	<h1>Erreur 404</h1>
 	<p><img alt="[image of a broken key]" src="{{ url_for('static', filename='images/broken-key.jpg') }}" width="260" height="180" />
 	<p class="oops">OUPS !
-	<p>Malgré toutes nos recherches, la page demandée n'a pu être trouvée !!! <span class="sadface">:(</span>
+	<p>Malgré toutes nos recherches, la page demandée n'a pu être trouvée !!! <span class="smiley-face">:(</span>
 	<br>
 	<br>
 	<a href="{{ url_for('general.index') }}">» Retourner à la page d'acceuil</a>
-</body>
-</html>
+{% endblock %}

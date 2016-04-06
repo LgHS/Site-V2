@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+{% block head %}
+    <title>{% block title %}Pouf Pouf{% endblock %} | Liège Hackerspace</title> {# Pouf Pouf: https://youtu.be/zElex_b0trE?t=1h12m50s Desproges #}
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon-194x194.png') }}?v=5" sizes="194x194" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon-16x16.png') }}?v=3" sizes="16x16" />
+{% endblock %}
+<body {% block body_attr %}{% endblock %}>
+{% block body%}
+{% endblock %}
+</body>
+</html>
