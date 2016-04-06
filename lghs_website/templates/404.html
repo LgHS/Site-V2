@@ -1,7 +1,6 @@
 {% extends "body_less_layout.html" %}
-{% block title %} Chapter 404: The Lost Page {% endblock %}
-{% block body %}
-<body>
+{% block head %}
+	{{ super() }}
 	<style type="text/css">
 	body {
 		font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -29,6 +28,9 @@
 		color: blue
 	}
 	</style>
+{% endblock %}
+{% block title %}Chapter 404: The Lost Page{% endblock %}
+{% block body %}
 	<h1>Erreur 404</h1>
 	<p><img alt="[image of a broken key]" src="{{ url_for('static', filename='images/broken-key.jpg') }}" width="260" height="180" />
 	<p class="oops">OUPS !
@@ -36,5 +38,4 @@
 	<br>
 	<br>
 	<a href="{{ url_for('general.index') }}">» Retourner à la page d'acceuil</a>
-</body>
 {% endblock %}
