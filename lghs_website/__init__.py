@@ -1,11 +1,18 @@
 from datetime import datetime
 from flask import Flask, render_template
-from .views import general
-from .utils import weekday_name
 
 app = Flask(__name__)
+
+# NOTE: It is advised to load the config ASAP, so we put 
+# it here before resuming the other imports (See more below)
 app.config.from_object('lghs_website.default_config')
 app.config.from_envvar('LGHS_WEBSITE_CONFIG', silent=True)
+
+# Example: https://github.com/mitsuhiko/flask-website/blob/master/flask_website/__init__.py It's been done here too
+# Source: http://flask.pocoo.org/docs/0.10/config/#configuring-from-files (at the bottom of the section)
+
+from .views import general
+from .utils import weekday_name
 
 
 @app.errorhandler(404)
