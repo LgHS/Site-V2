@@ -21,7 +21,7 @@ def is_open():
 	)
 	now = datetime.now()
 	for day, start_hour, end_hour in open_hours:
-		if day == now.weekday() and start_hour <= now.hour <= end_hour:
+		if day == now.weekday() and start_hour <= now.hour < end_hour:
 			return {"is_open" : True}
 	return {"is_open": False}
 

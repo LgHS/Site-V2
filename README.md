@@ -16,7 +16,7 @@ The website uses the Flask Microframework to run.
 and may leave some hidden processes running in background.
 
 Such process might still be the active one despite not preventing new ones from starting,
-thus leading to situations are to debug.)
+thus leading to situations hard to debug.)
 
 ## Dev
 
