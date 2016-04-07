@@ -70,7 +70,11 @@
 							Le samedi : de 13h à 18h
 						<p>
 							Ouvert :
-								<span class="label label-danger">NON</span>
+                                {% if is_open %}
+								    <span class="label label-success">OUI</span>
+                                {% else %}
+								    <span class="label label-danger">NON</span>
+                                {% endif %}
 					</article>
 					<article>
 						<h3>Le lieu</h3>
