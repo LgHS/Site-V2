@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, make_response
 
 mod = Blueprint('general', __name__)
 
@@ -18,3 +18,10 @@ def contact():
 @mod.route('/members/')
 def members():
 	return render_template('general/members.html', section='members')
+
+
+@mod.route('/api/')
+def api():
+	r = make_response(render_template('general/api.json', section='api'))
+	r.headers.set("Content-type", "text/json")
+	return r

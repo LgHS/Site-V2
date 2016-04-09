@@ -1,0 +1,42 @@
+{
+    "api": "0.13",
+    "space": "Liege Hackerspace",
+    "logo": "http://lghs.be/static/images/logo.png",
+    "url": "http://lghs.be",
+    "location": {
+        "address": "Rue Louis Jamme 11, 4020 Liege",
+        "lon": 50.638373,
+        "lat": 5.583409
+    },
+    "contact": {
+        "email": "ping@lghs.be",
+        "irc": "irc://irc.freenode.net/lghs",
+        "twitter": "@LgHackerSpace",
+        "facebook": "https://www.facebook.com/liegehackerspace/"
+    },
+    "feeds": {
+        "wiki": {
+            "type": "rss",
+            "url": "http://wiki.lghs.be/feed.php"
+        }
+    },
+    "issue_report_channels": [
+        "twitter"
+    ],
+    "open": {% if is_open %}true{% else %}false{% endif %},
+    "state": {
+        "open": {% if is_open %}true{% else %}false{% endif %},
+        "icon": {
+            "open": "/static/images/door-opened.png",
+            "closed": "/static/images/door-closed.png"
+        }
+    },
+    "icon": {
+        "open": "/static/images/door-opened.png",
+        "closed": "/static/images/door-closed.png"
+    },
+    "projects": [
+        "https://github.com/LgHS/",
+        "http://wiki.lghs.be/projet:start"
+    ]
+}
