@@ -23,9 +23,9 @@
     "issue_report_channels": [
         "twitter"
     ],
-    "open": {% if is_open %}true{% else %}false{% endif %},
+    "open": {% if hs_is_open %}true{% else %}false{% endif %},
     "state": {
-        "open": {% if is_open %}true{% else %}false{% endif %},
+        "open": {% if hs_is_open %}true{% else %}false{% endif %},
         "icon": {
             "open": "/static/images/door-opened.png",
             "closed": "/static/images/door-closed.png"
