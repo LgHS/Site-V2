@@ -27,7 +27,6 @@ def hs_is_open(time:datetime=None, opening_hours:dict=None) -> bool:
 		time = datetime.now()
 		opening_hours = app.config['OPENING_HOURS']
 	
-	
 	If we provide a day when the HS is open
 	>>> hs_is_open(datetime(2016, 1, 6, 15, 0), {'wednesday': (13, 18)})
 	True
@@ -35,7 +34,7 @@ def hs_is_open(time:datetime=None, opening_hours:dict=None) -> bool:
 	False
 	
 	If provided with a day when the HS doesn't open at all.
-	>>> hs_is_open(datetime.datetime(2016, 1, 7, 15, 30), {'wednesday': (13, 18)})
+	>>> hs_is_open(datetime(2016, 1, 7, 15, 30), {'wednesday': (13, 18)})
 	False
 	"""
 	
