@@ -5,26 +5,26 @@
 		<header id="page-header">
 			<div class="row">
 				<div class="col-sm-6">
-					<div id="logo">
-						<h1><a href="{{ url_for('general.index') }}" title="Retour à la page d'accueil">Liege Hackerspace</a></h1>
-						<h2><a href="{{ url_for('general.index') }}" title="Retour à la page d'accueil">Learn \ Make \ Share</a></h2>
-					</div>
+					<a id="logo" href="{{ url_for('general.index') }}" title="Retour à la page d'accueil">
+						<h1>Liege Hackerspace</h1>
+						<h2>Learn \ Make \ Share</h2>
+					</a>
 				</div>
 				<div class="col-sm-6">
 					<nav id="main-nav">
 						<ul>
 							<li class="{{ 'active' if section == 'home' else '' }}">
-								<a href="{{ url_for('general.index') }}" title="Retour à la page d'accueil">
-									Home
+								<a href="{{ url_for('general.index') }}">
+									Accueil
 								</a>
 							</li>
 							<li>
-								<a href="http://wiki.lghs.be/projet:start" title="Voir la liste des projets">
+								<a href="http://wiki.lghs.be/projet:start">
 									Projets
 								</a>
 							</li>
 							<li>
-								<a href="http://wiki.lghs.be" title="Voir notre wiki">
+								<a href="http://wiki.lghs.be">
 									Wiki
 								</a>
 							</li>
@@ -34,8 +34,8 @@
 								</a>
 							</li>
 							<li class="{{ 'active' if section == 'members' else '' }}">
-								<a href="{{ url_for('general.members') }}" title="Contactez-nous">
-									Members
+								<a href="{{ url_for('general.members') }}">
+									Membres
 								</a>
 							</li>
 						</ul>
@@ -44,7 +44,7 @@
 			</div>
 		</header>
 		{% for message in get_flashed_messages(): %}
-			<p class=message>{{ message }}</p>
+			<p class="message">{{ message }}</p>
 		{% endfor %}
 		<div id="content-wrapper">
 			<div class="row">
