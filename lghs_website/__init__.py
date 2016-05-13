@@ -23,18 +23,24 @@ def not_found(error):
 def hs_is_open(time:datetime=None, opening_hours:dict=None) -> bool:
 	"""Indicate if the HS is opened at said time. Only relies on hours.
 	
-	Default values:
-		time = datetime.now()
-		opening_hours = app.config['OPENING_HOURS']
+	Args:
+		time =
+			A date (as datetime.datetime object) you want to know if the HS is open or not.
+			Defaults to: datetime.now()
+			
+		opening_hours = 
+			eg: {'monday': (13, 18), 'friday': (5, 7)}  # Tuples are (opening_hour, closing_hour).
+			Defaults to: app.config['OPENING_HOURS']
 	
 	
-	If we provide a day when the HS is open
+	If a day when the HS is actually open is provided:
+	
 	>>> hs_is_open(datetime(2016, 1, 6, 15, 0), {'wednesday': (13, 18)})
 	True
 	>>> hs_is_open(datetime(2016, 1, 6, 12, 30), {'wednesday': (13, 18)})
 	False
 	
-	If provided with a day when the HS doesn't open at all.
+	If a day when the HS doesn't open at all is provided:
 	>>> hs_is_open(datetime.datetime(2016, 1, 7, 15, 30), {'wednesday': (13, 18)})
 	False
 	"""
